@@ -2,14 +2,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Laravel</title>
+        <title>Vue JS</title>
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
         <link href="{{ mix('css/app.css') }}" type="text/css" rel="stylesheet" />
         <meta name="csrf-token" value="{{ csrf_token() }}" />
     </head>
     <body>
         <div id="app">
-          <example-component></example-component>
+          <login-component></login-component>
         </div>
         <script src="{{ mix('js/app.js') }}" type="text/javascript"></script>
     </body>
