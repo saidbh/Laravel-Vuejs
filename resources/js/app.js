@@ -9,9 +9,9 @@ require('./bootstrap');
 window.Vue = require('vue').default;
 
 import VueRouter from 'vue-router';
-Vue.use(VueRouter);
 import VueAxios from 'vue-axios';
 import axios from 'axios';
+Vue.use(VueRouter);
 Vue.use(VueAxios, axios);
 /**
  * The following block of code may be used to automatically register your
