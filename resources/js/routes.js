@@ -9,7 +9,7 @@ import Dashboard from './components/auth/dashboard.vue';
 
 const routes = [
     {
-        path: '/login',
+        path: '/',
         component: Login,
         name: "Login"
     },
@@ -39,7 +39,7 @@ router.beforeEach((to, from, next) => {
             next();
             return;
         } else {
-            router.push('/login');
+            router.push('/');
         }
     } else {
         next();
