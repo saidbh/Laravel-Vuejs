@@ -3,9 +3,9 @@ import Auth from './Auth.js';
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
-import Login from './components/login.vue';
-import Register from './components/register.vue';
-import Dashboard from './components/dashboard.vue';
+import Login from './components/auth/login.vue';
+import Register from './components/auth/register.vue';
+import Dashboard from './components/auth/dashboard.vue';
 
 const routes = [
     {
