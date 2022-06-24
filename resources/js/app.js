@@ -11,8 +11,10 @@ window.Vue = require('vue').default;
 import VueRouter from 'vue-router';
 import VueAxios from 'vue-axios';
 import axios from 'axios';
+import Auth from './Auth.js';
 Vue.use(VueRouter);
 Vue.use(VueAxios, axios);
+Vue.prototype.auth = Auth;
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -24,6 +26,8 @@ Vue.use(VueAxios, axios);
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
+//import App from './app.vue';
+import router from './routes';
 Vue.component('login-component', require('./components/auth/login.vue').default);
 
 /**
@@ -32,5 +36,10 @@ Vue.component('login-component', require('./components/auth/login.vue').default)
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
- const router = new VueRouter({ mode: 'history'});
- const app = new Vue(Vue.util.extend({ router })).$mount('#app');
+ //const router = new VueRouter({ mode: 'history'});
+ //const app = new Vue(Vue.util.extend({ router })).$mount('#app');
+ const app = new Vue({
+    el: '#app',
+    router,
+    render: h => h(App),
+});
